@@ -2,9 +2,7 @@
 // importing logo
 import Logo from "@/app/assets/Logo_Mobile.svg";
 // importing useEffect, useRef, useState
-import { useEffect, useRef, useState } from "react";
-// importing gsap
-import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
 export default function AnimatedSlider() {
     const sliderRef = useRef<HTMLDivElement>(null);
