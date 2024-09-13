@@ -16,7 +16,7 @@ export default function AnimatedSlider() {
       const clone = slider.innerHTML;
       slider.innerHTML += clone + clone;
   
-      let scrollSpeed = 1;
+      const scrollSpeed = 1;
       let scrollPosition = 0;
   
       const animateSlider = () => {
