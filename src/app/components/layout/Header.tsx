@@ -1,6 +1,4 @@
 "use client";
-// importing Image
-import Image from "next/image";
 // import Logos
 import Logo from "@/app/assets/Logo.svg";
 import LogoMobile from "@/app/assets/Logo_Mobile.svg";

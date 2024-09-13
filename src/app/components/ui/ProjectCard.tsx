@@ -1,6 +1,6 @@
 export default function ProjectCard() {
     return(
-        <div>
+        <div className="w-[25rem] h-[25rem] bg-black">
             
         </div>
     )

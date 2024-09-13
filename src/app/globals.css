@@ -25,31 +25,33 @@ body {
   background-color: transparent; /* Transparent track */
 }
 
+/* Text Sizes for Mobile and Larger Screens */
 h1 {
-  @apply text-6xl leading-[3.75rem] lg:text-8xl lg:leading-[6rem];
+  @apply text-4xl leading-[2.5rem] lg:text-8xl lg:leading-[6rem]; /* Mobile: text-4xl, Desktop: text-8xl */
 }
 h2 {
-  @apply lg:text-7xl lg:leading-[4.5rem] text-5xl leading-[3rem];
+  @apply text-3xl leading-[2rem] lg:text-7xl lg:leading-[4.5rem]; /* Mobile: text-3xl, Desktop: text-7xl */
 }
 h3 {
-  @apply lg:text-6xl lg:leading-[3.75rem] text-4xl leading-[2.25srem];
+  @apply text-2xl leading-[1.75rem] lg:text-6xl lg:leading-[3.75rem]; /* Mobile: text-2xl, Desktop: text-6xl */
 }
 h4 {
-  @apply text-5xl leading-tight;
+  @apply text-xl leading-[1.5rem] lg:text-5xl lg:leading-tight; /* Mobile: text-xl, Desktop: text-5xl */
 }
 h5 {
-  @apply text-4xl leading-tight;
+  @apply text-lg leading-tight lg:text-4xl; /* Mobile: text-lg, Desktop: text-4xl */
 }
 h6 {
-  @apply text-xl leading-tight;
+  @apply text-base leading-tight lg:text-xl; /* Mobile: text-base, Desktop: text-xl */
 }
 p {
-  @apply text-base leading-tight;
+  @apply text-sm leading-tight lg:text-base; /* Mobile: text-sm, Desktop: text-base */
 }
+
 /* Header */
 .header {
   background-color: #fff;
-  @apply w-screen h-auto flex flex-row items-center lg:items-start justify-evenly px-5 lg:px-10 py-10;
+  @apply w-screen h-auto flex flex-row items-center lg:items-start justify-evenly px-5 lg:px-20 py-10;
 }
 .header_icon_contianer {
   @apply w-1/2 h-9 flex items-center justify-start;
@@ -71,8 +73,6 @@ p {
 .header_links_container {
   @apply w-1/2 lg:w-2/3 hidden lg:flex items-start justify-between font-[500];
 }
-
-/* Header */
 
 /* Landing Page */
 .slider_icon {
@@ -99,4 +99,6 @@ p {
 .background_image_container {
   @apply w-full flex-grow flex;
 }
+
+
 /* Landing Page */
