@@ -2,26 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Hide scrollbar but keep scroll functionality */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply m-0 p-0 bg-[#fff] overflow-x-hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+::-webkit-scrollbar {
+  width: 0px; /* Small width for scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* Darker thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Transparent track */
+}
+
+h1 {
+  @apply text-6xl leading-[3.75rem] lg:text-8xl lg:leading-[6rem];
+}
+h2 {
+  @apply lg:text-7xl lg:leading-[4.5rem] text-5xl leading-[3rem];
+}
+h3 {
+  @apply lg:text-6xl lg:leading-[3.75rem] text-4xl leading-[2.25srem];
+}
+h4 {
+  @apply text-5xl leading-tight;
+}
+h5 {
+  @apply text-4xl leading-tight;
+}
+h6 {
+  @apply text-xl leading-tight;
+}
+p {
+  @apply text-base leading-tight;
+}
+/* Header */
+.header {
+  background-color: #fff;
+  @apply w-screen h-auto flex flex-row items-center lg:items-start justify-evenly px-5 lg:px-10 py-10;
+}
+.header_icon_contianer {
+  @apply w-1/2 h-9 flex items-center justify-start;
+}
+.header_icon_desktop_icon {
+  @apply hidden lg:flex h-8 w-60;
+}
+.header_icon_mobile_icon {
+  fill: #f33304;
+  @apply flex lg:hidden h-12 w-12;
+}
+.header_menu_container {
+  @apply w-1/2 lg:w-1/3 flex items-center justify-end;
+}
+.header_menu_icon {
+  fill: #f33304;
+  @apply h-5 w-9  flex lg:hidden cursor-pointer;
+}
+.header_links_container {
+  @apply w-1/2 lg:w-2/3 hidden lg:flex items-start justify-between font-[500];
+}
+
+/* Header */
+
+/* Landing Page */
+.slider_icon {
+  @apply h-12 w-10  fill-[#959595];
+}
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
+.slider_container {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.slider_content {
+  display: inline-flex;
+  @apply flex items-center justify-center;
+  animation: slide 10s linear infinite;
+}
+.background_image_container {
+  @apply w-full flex-grow flex;
+}
+/* Landing Page */
